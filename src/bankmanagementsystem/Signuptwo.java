@@ -1,6 +1,6 @@
 package bankmanagementsystem;
 
-import com.toedter.calendar.JDateChooser;
+
 
 import javax.swing.*;
 import java.awt.*;
@@ -8,6 +8,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import com.toedter.calendar.JDateChooser;
 
 public class Signuptwo extends JFrame implements ActionListener {
         JComboBox rfield,cfield,incofield, edufield,occfield ;

@@ -13,32 +13,35 @@ public class Login extends JFrame implements ActionListener {
     JPasswordField passwordfiled;
 
     Login(){
-        setTitle("ATM Login Page");
+        JFrame frame = new JFrame("ATM Login Page");
+        frame.setExtendedState(JFrame.MAXIMIZED_BOTH); // full screen
 
-        setExtendedState(JFrame.MAXIMIZED_BOTH); // ✅ full screen
-        setLayout(null);
-        getContentPane().setBackground(Color.WHITE);
+        setSize(800, 500);
+        setLocationRelativeTo(null);
+        frame.setLocation(350, 200);
+        frame.setBackground(Color.white);
+        frame.setLayout(null);
 
-        // Title
+// Title
         JLabel title = new JLabel("Welcome to the Login Page");
         title.setBounds(250, 40, 300, 30);
 
-        // Card Label
+// Card Label
         JLabel card = new JLabel("Card No:");
         card.setBounds(200, 120, 100, 25);
 
-        // PIN Label
+// PIN Label
         JLabel pin = new JLabel("PIN:");
         pin.setBounds(200, 170, 100, 25);
 
-        // Fields
+// Text Fields
         cardno = new JTextField();
         cardno.setBounds(300, 120, 200, 25);
 
         passwordfiled = new JPasswordField();
         passwordfiled.setBounds(300, 170, 200, 25);
 
-        // Buttons
+// Buttons
         signin = new JButton("Sign In");
         signin.setBounds(200, 250, 100, 30);
         signin.addActionListener(this);
@@ -51,17 +54,18 @@ public class Login extends JFrame implements ActionListener {
         signup.setBounds(440, 250, 100, 30);
         signup.addActionListener(this);
 
-        // ✅ ADD to THIS frame (not frame)
-        add(title);
-        add(card);
-        add(pin);
-        add(cardno);
-        add(passwordfiled);
-        add(signin);
-        add(clear);
-        add(signup);
+// Add to frame
+        frame.add(title);
+        frame.add(card);
+        frame.add(pin);
+        frame.add(cardno);
+        frame.add(passwordfiled);
+        frame.add(signin);
+        frame.add(clear);
+        frame.add(signup);
 
-        setVisible(true); // ✅ correct
+        frame.setVisible(true);
+
     }
     public void actionPerformed(ActionEvent ac){
         if(ac.getSource()==clear){

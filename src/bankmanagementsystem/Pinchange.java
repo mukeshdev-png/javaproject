@@ -119,12 +119,10 @@ public class Pinchange extends JFrame implements ActionListener {
                 }
             }
             setVisible(false);
-            new TransactionUI(pinno,"").setVisible(true);
+            new Login().setVisible(true);
 
             if (e.getSource() == backBtn) {
-                setVisible(false);
-                new TransactionUI(pinno,"").setVisible(true);
-                // closes window
+                dispose(); // closes window
             }
         }
     }
